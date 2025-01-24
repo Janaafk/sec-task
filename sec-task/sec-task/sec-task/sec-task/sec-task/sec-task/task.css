@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+/* Main container */
+.task-container {
+    width: 100vw;
+    height: 93vh;
+    max-height: 97%;
+    max-width: 97%;
+    margin: 0 auto;
+    padding: 0px;
+    border-radius: 8px;
+}
+
+/* Titles */
+h1, h2 {
+    padding: 0px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Task input section */
+.task-input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(182, 177, 177);
+    padding: 40px;
+}
+
+.task-input-section input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.task-input-section button {
+    width: 102%;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #0097a7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.task-input-section button:hover {
+    background-color: #007b8c;
+    transform: translateY(-5px);
+}
+
+button:active {
+    transform: translateY(5px);
+}
+
+/* Filters */
+.task-filters {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.task-filters button {
+    width: 50%;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #0097a7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.task-filters button:hover {
+    background-color: #007b8c;
+    transform: translateY(-5px);
+}
+
+.task-filters:active {
+    transform: translateY(5px);
+}
+
+/* Task list */
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.task-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.task-row span {
+    flex: 1;
+    padding-left: 10px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.icon-btn:hover {
+    color: #800707;
+}
+
+/* Actions */
+.task-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.task-actions button {
+    width: 49%;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #ea4646;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.task-actions button:hover {
+    background-color: #cc5040;
+    transform: translateY(-5px);
+}
+
+.task-actions button:active {
+    transform: translateY(5px);
+}
+
+/* No task message */
+#noTaskMessage {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #777;
+    margin-top: 20px;
+}
+
+/* Confirmation dialog */
+.confirmation-dialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 250px;
+}
+
+.confirmation-dialog button {
+    margin: 10px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.confirmation-dialog .cancel-btn {
+    background-color: lightgray;
+}
+
+.confirmation-dialog .confirm-btn {
+    background-color: red;
+    color: white;
+}
+
+.confirmation-dialog .cancel-btn:hover,
+.confirmation-dialog .confirm-btn:hover {
+    opacity: 0.8;
+}
+#errorMessage {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: left;
+    display: none;  /* إخفاء الرسالة بشكل افتراضي */
+}
+
