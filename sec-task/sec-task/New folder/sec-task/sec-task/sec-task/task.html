@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="task.css">
+    <title>Todo Manager</title>
+</head>
+<body>
+    <div class="task-container">
+        <h1>Task Input</h1>
+
+        <div class="task-input-section">
+            <input type="text" id="taskInput" placeholder="New Task">
+            <p id="errorMessage" style="display: none; color: red;">Task must be at least 5 characters long.</p>
+            <button id="addTaskBtn">Add New Task</button>
+           
+        </div>
+
+        <h2>Task List</h2>
+        <div class="task-filters">
+            <button id="showAll">All</button>
+            <button id="showDone">Done</button>
+            <button id="showTodo">Todo</button>
+        </div>
+
+        <div id="tasksContainer" class="task-list">
+            <!-- Tasks will be added here via JavaScript -->
+        </div>
+
+        <div class="task-actions">
+            <button id="deleteDoneTasks">Delete Done Tasks</button>
+            <button id="deleteAllTasks">Delete All Tasks</button>
+        </div>
+    </div>
+    <script src="task.js"></script>
+</body>
+</html>
